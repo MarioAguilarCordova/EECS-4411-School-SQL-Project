@@ -1,0 +1,38 @@
+
+Mario Aguilar Cordova 215607534
+
+EECS 4411 Report.txt
+
+Due: Decemeber 7th, 2021
+
+Question 1:
+
+The file labeled oneA.sql is the first variation of Question 1. We are asked to use an index to show a different access path. We do this by using bookid
+because it is used as a primary key and is clustered when used.
+
+The file labeled oneB.sql is the second variation of Question 1. We are asked to use another version of a different access path by including a general table scan. We do this by giving attributes to find a general section of the table to return. 
+
+Question 2:
+
+The file labeled twoA.sql is the first variation of Question 2. We are asked to use an aggregation with an explicit sort. This is done with genre because it is a general parameter that needs to be sorted. We do this sort with ORDER BY and from there we are givin an aggregation with an explicit sort.
+
+The file labeled twoB.sql is the second variation of Question 2. We are asked to use an ggregation without the need to sort, basically an aggregation that is done on the fly. We do this by using bookid as our parameter when doing the ORDER BY operation. What book id brings to the table is that the index is clustered meaning it does not have the need to be sorted and therefore can do the aggregation on the fly
+
+Question 3:
+
+The file labeled threeA.sql is the first variation of Question 3. We are asked to use an index-nested loop join for this variant. We do this by making a query that joins the there parameters with the AND operation. Then we provide multiple ids also know as indexes that the query needs to scan but is nested through having the query needing to scan 3 different tables to return the proper query plan.
+
+The file labeled threeB.sql is the second variation of Question 3. We are asked to not use an index-nested loop join for this variant. We do this by making individual sub-queries that allows for the query to not be index-nested and for the query to output the proper query plan and scan only one table per sub query.
+
+Question 4:
+
+The file labeled fourA.sql is the first variation of Question 4. We are asked to make a query that results in plans with different join orders for both variants. This variants join order is different because the steps of the query plan are different then that of its variant.
+
+The file labeled fourA.sql is the first variation of Question 4. We are asked to make a query that results in plans with different join orders for both variants. This variants join order is different because the steps of the query plan are different then that of its variant.
+
+
+Question 5:
+
+The file labeled fiveA.sql is the first variation of Question 5. We are asked to make our own variants but to make sure both variants are different in some way shape for form. This variant introduces a query to look for a book id less then 20 it is similar to the other variant but is not limited to only an index scan.
+
+The file labeled fiveA.sql is the second variation of Question 5. We are asked to make our own variants but to make sure both variants are different in some way shape for form. This variant introduces a query to look for  abook id less then 20 it is similar to the other variant but is limited to only an index scan.

@@ -1,0 +1,5 @@
+QUERY PLAN                                
+-------------------------------------------------------------------------
+ Index Scan using stl_book_pk on book  (cost=0.29..8.31 rows=1 width=38)
+   Index Cond: (bookid = 400)
+(2 rows)

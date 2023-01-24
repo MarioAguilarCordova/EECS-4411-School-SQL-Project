@@ -1,0 +1,6 @@
+QUERY PLAN                                    
+---------------------------------------------------------------------------------
+ Limit  (cost=0.29..21.43 rows=5 width=38)
+   ->  Index Scan using stl_book_pk on book  (cost=0.29..80.62 rows=19 width=38)
+         Index Cond: (bookid < 20)
+(3 rows)

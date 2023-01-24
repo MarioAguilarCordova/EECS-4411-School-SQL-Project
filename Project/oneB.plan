@@ -1,0 +1,6 @@
+                                                                        QUERY PLAN                                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on book  (cost=0.00..1444.00 rows=1 width=38)
+   Filter: (((language)::text = 'French'::text) AND ((genre)::text = 'Romance'::text) AND ((publisher)::text = 'Random movies'::text) AND (price = 15.35))
+(2 rows)
+

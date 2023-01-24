@@ -1,0 +1,7 @@
+QUERY PLAN                                 
+---------------------------------------------------------------------------
+ Bitmap Heap Scan on book  (cost=4.44..68.88 rows=19 width=38)
+   Recheck Cond: (bookid < 20)
+   ->  Bitmap Index Scan on stl_book_pk  (cost=0.00..4.43 rows=19 width=0)
+         Index Cond: (bookid < 20)
+(4 rows)

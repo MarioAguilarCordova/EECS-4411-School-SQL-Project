@@ -1,0 +1,13 @@
+QUERY PLAN                                                                           
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Unique  (cost=939661.58..2328937.82 rows=9997204 width=60)
+   ->  Gather Merge  (cost=939661.58..2104000.73 rows=9997204 width=60)
+         Workers Planned: 2
+         ->  Sort  (cost=938661.56..949075.31 rows=4165502 width=60)
+               Sort Key: purchase.custid, purchase.bookid, purchase.whenp, purchase.qnty, purchase.sale, book.language, book.genre, book.publisher, book.price
+               ->  Hash Join  (cost=1960.00..167434.38 rows=4165502 width=60)
+                     Hash Cond: (purchase.bookid = book.bookid)
+                     ->  Parallel Seq Scan on purchase  (cost=0.00..105332.02 rows=4165502 width=22)
+                     ->  Hash  (cost=944.00..944.00 rows=50000 width=38)
+                           ->  Seq Scan on book  (cost=0.00..944.00 rows=50000 width=38)
+(10 rows)

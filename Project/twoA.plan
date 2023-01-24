@@ -1,0 +1,6 @@
+QUERY PLAN                            
+-----------------------------------------------------------------
+ Sort  (cost=4846.41..4971.41 rows=50000 width=38)
+   Sort Key: genre
+   ->  Seq Scan on book  (cost=0.00..944.00 rows=50000 width=38)
+(3 rows)

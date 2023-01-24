@@ -1,0 +1,1 @@
+SELECT * FROM stl.book WHERE BOOKID < 20;
